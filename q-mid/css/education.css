@@ -1,0 +1,163 @@
+body {
+    font-family: 'Lora', serif;
+    background-color: #191818;
+    color: #f4f4f4;
+}
+
+#education {
+    padding: 100px 20px;
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+#education h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    color: #b62e7f;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#education .intro {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: rgba(244, 244, 244, 0.82);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 800px;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 40px 0;
+    padding: 20px;
+    background: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeUp 0.6s ease-in-out forwards;
+    opacity: 0;
+    transition: all;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 60%;
+    left: 150px;
+    cursor: pointer;
+}
+
+.timeline-item:nth-child(odd) {
+    background: linear-gradient(135deg, #b62e7f, #6a0572);
+}
+
+.timeline-item:nth-child(even) {
+    background: linear-gradient(135deg, #6a0572, #b62e7f);
+}
+
+.timeline-item:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.timeline-item:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.timeline-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.timeline-content h3 {
+    font-size: 1.3em;
+    color: #f4f4f4;
+}
+
+.timeline-content p {
+    font-size: 1em;
+    margin-top: 10px;
+    color: rgba(244, 244, 244, 0.82);
+}
+
+.timeline-item .icon {
+    font-size: 2.5em;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100px;
+    width: 4px;
+    height: 100%;
+    background: #b62e7f;
+    z-index: 1;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border: 4px solid #b62e7f;
+    border-radius: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+    #education h1 {
+        font-size: 2em;
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-item {
+        text-align: left;
+        flex-direction: column;
+        width: calc(100% - 40px);
+        left: 40px;
+    }
+
+    .timeline-item::before {
+        display: none;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

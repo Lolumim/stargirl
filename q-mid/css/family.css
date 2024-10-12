@@ -1,0 +1,97 @@
+body {
+    font-family: 'Lora', serif;
+    background-color: #191818;
+}
+#family {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#family h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    color: #b62e7f;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-in-out forwards;
+}
+
+#family .intro {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #f4f4f4;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.family-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.family-member {
+    background: rgb(35, 33, 33);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    animation: fadeInUp 0.4s ease-in-out forwards;
+    animation-delay: 0.4s;
+}
+
+.family-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.family-member img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.family-member h2 {
+    font-size: 1.5em;
+    margin: 15px 0 10px;
+    color: #f4f4f4;
+}
+
+.family-member p {
+    font-size: 1em;
+    padding: 0 15px 20px;
+    color: rgba(244, 244, 244, 0.82);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    #family h1 {
+        font-size: 2em;
+    }
+
+    .family-member img {
+        height: 200px;
+    }
+
+    .family-member h2 {
+        font-size: 1.3em;
+    }
+}
